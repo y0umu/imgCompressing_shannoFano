@@ -1,0 +1,15 @@
+全局变量
+
+变量名								说明
+NEXT_BUTTON_ENTRY_CNT				记录show_next_step_button被调用次数
+ENCODING_MODE						上分支编0还是下分支编0的问题
+FANO_DICT							cell型。译码和在图上绘制码字的时候需要用到，建立信源符号与编码的映射关系。
+									注意：建立新字典之前必须把旧的字典清除。
+									dict{:,1}为信源符号（下标）
+									dict{:,2}为对应的编码（以a、b而不是0、1作为符号）
+SIZE_FANO_DICT						标量。字典容量计数器。唯一的用途是在迭代调用fanoTree_makeDict函数时起到计数的作用。
+									用户需要做的事情就是在开始调用fanoTree_makeDict之前将其赋值为1
+NODES_SOURCE						信源结构体。由prob（概率）和symbol（符号）两个分量组成
+FANO_TREE							Fano树。由fanoTree_new创建
+
+NEXT_BUTTON_ENTRY_CNT ENCODING_MODE FANO_DICT SIZE_FANO_DICT NODES_SOURCE FANO_TREE
